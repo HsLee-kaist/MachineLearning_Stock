@@ -8,7 +8,7 @@ class DiabetesDataset(Dataset):
 
     # Initialize your data, download, etc.
     def __init__(self):
-        xy = np.loadtxt('./data/diabetes.csv.gz',
+        xy = np.loadtxt('./data/diabetes.csv',
                         delimiter=',', dtype=np.float32)
         self.len = xy.shape[0]
         self.x_data = torch.from_numpy(xy[:, 0:-1])
